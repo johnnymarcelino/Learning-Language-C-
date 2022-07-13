@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VEYXu1d2nOxRKj0cP8+p6JL7Gf88KqjIamOUofPuffndReH9+bmbWSzp/M9lf1uwdpWHtevz1ReqkS47paAbOA==",
+  "dgSpecHash": "snnalVLZ3c4h0bsGUpGoJKxgve7UBcm2tIWP6fqKAtCJtCw1ZxWRAGkN8gkr8zMhVuds+7FzIFcQPFrysslqsw==",
   "success": true,
-  "projectFilePath": "C:\\BackEnd\\C#\\Seção_02\\Learning-Language-CSHARP\\Projetos_Iniciante\\Primeiro\\Primeiro\\Primeiro.csproj",
+  "projectFilePath": "C:\\BackEnd\\C#\\Seção_02\\Learning-Language-CSHARP\\Projetos_Iniciante\\Primeiro01\\Primeiro01\\Primeiro01.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\johnn\\.nuget\\packages\\microsoft.netcore.app\\2.1.0\\microsoft.netcore.app.2.1.0.nupkg.sha512",
     "C:\\Users\\johnn\\.nuget\\packages\\microsoft.netcore.dotnetapphost\\2.1.0\\microsoft.netcore.dotnetapphost.2.1.0.nupkg.sha512",

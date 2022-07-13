@@ -1,0 +1,13 @@
+C:\BackEnd\C#\Seção_02\Learning-Language-CSHARP\Projetos_Iniciante\Primeiro01\Primeiro01\bin\Debug\netcoreapp2.1\Primeiro01.deps.json
+C:\BackEnd\C#\Seção_02\Learning-Language-CSHARP\Projetos_Iniciante\Primeiro01\Primeiro01\bin\Debug\netcoreapp2.1\Primeiro01.runtimeconfig.json
+C:\BackEnd\C#\Seção_02\Learning-Language-CSHARP\Projetos_Iniciante\Primeiro01\Primeiro01\bin\Debug\netcoreapp2.1\Primeiro01.runtimeconfig.dev.json
+C:\BackEnd\C#\Seção_02\Learning-Language-CSHARP\Projetos_Iniciante\Primeiro01\Primeiro01\bin\Debug\netcoreapp2.1\Primeiro01.dll
+C:\BackEnd\C#\Seção_02\Learning-Language-CSHARP\Projetos_Iniciante\Primeiro01\Primeiro01\bin\Debug\netcoreapp2.1\Primeiro01.pdb
+C:\BackEnd\C#\Seção_02\Learning-Language-CSHARP\Projetos_Iniciante\Primeiro01\Primeiro01\obj\Debug\netcoreapp2.1\Primeiro01.csproj.AssemblyReference.cache
+C:\BackEnd\C#\Seção_02\Learning-Language-CSHARP\Projetos_Iniciante\Primeiro01\Primeiro01\obj\Debug\netcoreapp2.1\Primeiro01.GeneratedMSBuildEditorConfig.editorconfig
+C:\BackEnd\C#\Seção_02\Learning-Language-CSHARP\Projetos_Iniciante\Primeiro01\Primeiro01\obj\Debug\netcoreapp2.1\Primeiro01.AssemblyInfoInputs.cache
+C:\BackEnd\C#\Seção_02\Learning-Language-CSHARP\Projetos_Iniciante\Primeiro01\Primeiro01\obj\Debug\netcoreapp2.1\Primeiro01.AssemblyInfo.cs
+C:\BackEnd\C#\Seção_02\Learning-Language-CSHARP\Projetos_Iniciante\Primeiro01\Primeiro01\obj\Debug\netcoreapp2.1\Primeiro01.csproj.CoreCompileInputs.cache
+C:\BackEnd\C#\Seção_02\Learning-Language-CSHARP\Projetos_Iniciante\Primeiro01\Primeiro01\obj\Debug\netcoreapp2.1\Primeiro01.dll
+C:\BackEnd\C#\Seção_02\Learning-Language-CSHARP\Projetos_Iniciante\Primeiro01\Primeiro01\obj\Debug\netcoreapp2.1\Primeiro01.pdb
+C:\BackEnd\C#\Seção_02\Learning-Language-CSHARP\Projetos_Iniciante\Primeiro01\Primeiro01\obj\Debug\netcoreapp2.1\Primeiro01.genruntimeconfig.cache

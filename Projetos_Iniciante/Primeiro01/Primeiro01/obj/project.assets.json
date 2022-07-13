@@ -695,11 +695,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\BackEnd\\C#\\Seção_02\\Learning-Language-CSHARP\\Projetos_Iniciante\\Primeiro\\Primeiro\\Primeiro.csproj",
-      "projectName": "Primeiro",
-      "projectPath": "C:\\BackEnd\\C#\\Seção_02\\Learning-Language-CSHARP\\Projetos_Iniciante\\Primeiro\\Primeiro\\Primeiro.csproj",
+      "projectUniqueName": "C:\\BackEnd\\C#\\Seção_02\\Learning-Language-CSHARP\\Projetos_Iniciante\\Primeiro01\\Primeiro01\\Primeiro01.csproj",
+      "projectName": "Primeiro01",
+      "projectPath": "C:\\BackEnd\\C#\\Seção_02\\Learning-Language-CSHARP\\Projetos_Iniciante\\Primeiro01\\Primeiro01\\Primeiro01.csproj",
       "packagesPath": "C:\\Users\\johnn\\.nuget\\packages\\",
-      "outputPath": "C:\\BackEnd\\C#\\Seção_02\\Learning-Language-CSHARP\\Projetos_Iniciante\\Primeiro\\Primeiro\\obj\\",
+      "outputPath": "C:\\BackEnd\\C#\\Seção_02\\Learning-Language-CSHARP\\Projetos_Iniciante\\Primeiro01\\Primeiro01\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
