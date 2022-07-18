@@ -32,7 +32,7 @@ namespace WriteAndRead {
 
             //console.writeline(name + " is " + age + " years old and she has a bank balance of " + balance.tostring("f2", cultureinfo.invariantculture) + "$");
 
-            //Console.WriteLine("Console WriteLine");
+            Console.WriteLine("Console WriteLine");
 
         }
     }
