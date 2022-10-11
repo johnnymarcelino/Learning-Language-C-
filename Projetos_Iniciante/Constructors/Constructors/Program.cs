@@ -14,7 +14,15 @@ namespace Constructors {
             //Console.Write("Quantidade no estoque: ");
             //int quantidade = int.Parse(Console.ReadLine());
 
-            Produto p = new Produto(nome, preco); // aqui tambem podemos atribuir um valor ao construtor
+            //Produto p = new Produto(nome, preco); // aqui tambem podemos atribuir um valor ao construtor
+
+            Produto p2 = new Produto(nome, preco); // dessa forma padrinizada não permite-se mais após as atribuições, porém com construtor padrão formalizado pode-se utilizar o vazio
+
+            Produto p3 = new Produto { // dessa forma padrinizada não permite-se mais após as atribuições
+                Nome = "TV", 
+                Preco = 500.0, 
+                Quantidade = 20
+            }; 
 
             Console.WriteLine();
             Console.WriteLine("Dados do produto: " + p);
