@@ -23,7 +23,7 @@ namespace Encapsulation {
         // Utilizando Auto Propeties, forma simplificada de declarar sem lógicas particulares de get e set
         //public string _nome; atributos privativo 
 
-        public string _nome; // há lógica customizada, portanto essa formar, sem auto propeties pra manipular através das implementações
+        public string _nome; // há lógica customizada, portanto usar essa forma sem auto propeties pra manipular através das implementações
         public double Preco { get; set; }
         public int Quantidade { get; private set; }
 
