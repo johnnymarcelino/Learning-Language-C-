@@ -11,8 +11,8 @@ namespace ForeachLoop {
 
             Console.WriteLine("============");
 
-            foreach (string obj in vect) {
-                Console.WriteLine(obj);
+            foreach (string item in vect) {
+                Console.WriteLine(item);
             }
         }
     }
