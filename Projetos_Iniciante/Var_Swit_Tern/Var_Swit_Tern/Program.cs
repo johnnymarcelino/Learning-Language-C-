@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace Var_Swit_Tern
 {
@@ -60,7 +61,8 @@ namespace Var_Swit_Tern
             */
 
             // And this method is about switch-case
-
+            
+            /*
             int wee = int.Parse(Console.ReadLine());
             string day;
 
@@ -92,7 +94,29 @@ namespace Var_Swit_Tern
             }
 
             Console.WriteLine("Day: " + day);
+            */
 
+            // And this method is about ternary condition
+
+            double price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            // On the method if-else
+            /*
+            double discont;
+
+            if (price < 20.0) {
+                discont = price * 0.1;
+            }
+            else {
+                discont = (price * 0.05);
+            }
+            */
+
+            // On the method ternary
+
+            double discont = (price < 20.0) ? discont = price * .1 : discont = price * .05;
+
+            Console.WriteLine("Discont: " + discont);
         }
     }
 }
