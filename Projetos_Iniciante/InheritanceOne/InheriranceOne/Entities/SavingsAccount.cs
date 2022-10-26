@@ -21,5 +21,14 @@ namespace InheriranceOne.Entities
         {
             Balance += Balance * InterestRate;
         }
+
+        // Trabalhando com Sobreposição/Sobrescrito, palavra virtual, override e base - subclasses
+
+        public override void Withdraw(double amount)  // override usado nas subclasses
+        {
+            //Balance -= amount;
+            base.Withdraw(amount);  // invocar o método comum da superclasse
+            Balance -= 2.0;
+        }
     }
 }

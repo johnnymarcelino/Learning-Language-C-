@@ -19,6 +19,8 @@ namespace InheriranceOne
 
             */
 
+            /*
+
             // trabalhando com UpCasting e DownCasting
 
             Account acc = new Account(1010, "Johnny", 0.0);
@@ -53,6 +55,17 @@ namespace InheriranceOne
                 acc5.UpdateBalance();
                 Console.WriteLine("Update!");
             }
+
+            */
+
+            Account account = new Account(1001, "Gomes", 500.00);
+            Account account1 = new SavingsAccount(1001, "Gomes", 500.00, 0.01);
+
+            account.Withdraw(10);
+            account1.Withdraw(10);
+
+            Console.WriteLine(account.Balance);
+            Console.WriteLine(account1.Balance);
 
         }
     }

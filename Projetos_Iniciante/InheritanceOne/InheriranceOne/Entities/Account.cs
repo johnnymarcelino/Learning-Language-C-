@@ -21,5 +21,34 @@ namespace InheriranceOne.Entities
             Balance = balance;
         }
 
+        // Trabalhando com UpCasting e DownCasting
+
+        /*
+
+        public void Withdraw(double amount)
+        {
+            Balance -= amount;
+        }
+
+        public void Deposit(double amount)
+        {
+            Balance -= amount;
+        }
+
+        */
+
+        // Trabalhando com Sobreposição/Sobrescrito, palavra virtual, override e base - subclasses
+
+        public virtual void Withdraw(double amount)
+        {
+            Balance -= amount + 5.00;
+        }
+
+        public void Deposit(double amount)
+        {
+            Balance -= amount;
+        }
+
+
     }
 }
