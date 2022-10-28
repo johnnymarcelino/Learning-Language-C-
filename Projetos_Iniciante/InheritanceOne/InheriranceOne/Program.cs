@@ -1,5 +1,7 @@
 ﻿using InheriranceOne.Entities;
 using System;
+using System.Collections.Generic;
+using System.Globalization;
 
 namespace InheriranceOne
 {
@@ -58,6 +60,8 @@ namespace InheriranceOne
 
             */
 
+            /*
+
             Account account = new Account(1001, "Gomes", 500.00);
             Account account1 = new SavingsAccount(1001, "Gomes", 500.00, 0.01);
 
@@ -66,6 +70,41 @@ namespace InheriranceOne
 
             Console.WriteLine(account.Balance);
             Console.WriteLine(account1.Balance);
+
+            */
+
+            // Trabalhando com classes abstratas (objetos)
+            // nota - superclasses abstrata não pode ser instanciada, por outro lado, subclasses podem ser instanciadas
+
+            
+            //Account account = new Account(1001, "Gomes", 500.00);  //  não pode ser instanciada 
+            //Account account1 = new SavingsAccount(1001, "Gomes", 500.00, 0.01); //  pode ser instanciada pois não é abstrada
+
+            List<Account> list = new List<Account>();  // tipo como lista pode-se instanciar
+
+            list.Add(new SavingsAccount(200, "johnny", 1000, 0.01));
+            list.Add(new BusinessAccount(600, "jose", 1000, 0.04));
+            list.Add(new SavingsAccount(500, "Joao", 4000, 0.04));
+            list.Add(new BusinessAccount(300, "carlos", 1000, 0.03));
+            list.Add(new BusinessAccount(300, "carlos", 1000, 0.03));
+
+            double sum = 0;
+            foreach (Account account in list)
+            {
+                sum += account.Balance;
+            }
+
+            Console.WriteLine("Total balance: " + sum.ToString("F2", CultureInfo.InvariantCulture));
+
+            foreach (Account account in list)
+            {
+                account.Withdraw(10.00);
+            }
+            
+            foreach (Account account in list)
+            {
+                Console.WriteLine("Updated balance for account " + account.Number + ": " + account.Balance.ToString("F2", CultureInfo.InvariantCulture));
+            }
 
         }
     }
