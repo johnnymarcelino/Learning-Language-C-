@@ -1,6 +1,6 @@
 ﻿using System;
 using ExceptionHanding.Entities.Exceptions;
-using Program.Entities.Exceptions;
+//using ExceptionHanding.Entities;
 
 namespace ExceptionHanding.Entities
 {

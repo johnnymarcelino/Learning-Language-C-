@@ -155,9 +155,17 @@ namespace ExceptionHanding
                 reservation.UpdateDates(checkIn, checkOut);
                 Console.WriteLine("Reservation: " + reservation);
             }
-            catch (DomainException e)
+            catch (DomainException e)  // evitar quebrar o programa com os tratamentos personalizados
             {
-                Console.WriteLine("Error in reservation: " + e.Message);
+                Console.WriteLine("Error in reservation: " + e.Message); 
+            }
+            catch (FormatException e)  // evitar quebrar o programa com os tratamentos personalizados
+            {
+                Console.WriteLine("Format Error! " + e.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Unexpected Error: " + e.Message);
             }
         }
     }
