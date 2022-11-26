@@ -37,27 +37,27 @@ namespace Files
                 Console.WriteLine(e.Message);
             }
 
+            // with File object
             
-            string sourcePath = @"c:\temp\file1.txt";
-            string targetPath = @"c:\temp\file2.txt";
-            try
-            {
-                // File não necessita de instanciação
+            //string sourcePath = @"c:\temp\file1.txt";
+            //string targetPath = @"c:\temp\file2.txt";
+            //try
+            //{
+            //    // File não necessita de instanciação
 
-                File.Copy(sourcePath, targetPath);
-                string[] lines = File.ReadAllLines(sourcePath);
-                foreach (string line in lines)
-                {
-                    Console.WriteLine(line);
-                }
-            }
-            catch (IOException e)
-            {
-                Console.WriteLine("An error occurred");
-                Console.WriteLine(e.Message);
-            }
+            //    File.Copy(sourcePath, targetPath);
+            //    string[] lines = File.ReadAllLines(sourcePath);
+            //    foreach (string line in lines)
+            //    {
+            //        Console.WriteLine(line);
+            //    }
+            //}
+            //catch (IOException e)
+            //{
+            //    Console.WriteLine("An error occurred");
+            //    Console.WriteLine(e.Message);
+            //}
 
-            */
 
             // FileStream and StreamReader
 
@@ -110,6 +110,58 @@ namespace Files
                 if (sr != null)
                     sr.Close();
             }
+            
+            */
+
+
+            // using block
+
+            // without File object
+
+            //try
+            //{
+            //    string path = @"c:\tests\file.txt";
+
+            //    using (FileStream fs = new FileStream(path, FileMode.Open))
+            //    {
+            //        using (StreamReader sr = new StreamReader(fs))
+            //        {
+            //            while (!sr.EndOfStream)
+            //            {
+            //                string line = sr.ReadLine();
+            //                Console.WriteLine(line);
+            //            }
+            //        }
+            //    }
+            //}
+            //catch (IOException e)
+            //{
+            //    Console.WriteLine("An error occurred");
+            //    Console.WriteLine(e.Message);
+            //}
+
+            // with File object
+
+            string path = @"c:\tests\file1.txt";
+            try
+            {
+                using (StreamReader sr = File.OpenText(path))
+                {
+                    while (!sr.EndOfStream)
+                    {
+                        string line = sr.ReadLine();
+                        Console.WriteLine(line);
+                    }
+                }
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("An error occurred");
+                Console.WriteLine(e.Message);
+            }
+
+
+
         }
     }
 }
