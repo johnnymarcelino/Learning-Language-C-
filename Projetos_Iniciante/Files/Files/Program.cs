@@ -111,7 +111,6 @@ namespace Files
                     sr.Close();
             }
             
-            */
 
 
             // using block
@@ -160,7 +159,30 @@ namespace Files
                 Console.WriteLine(e.Message);
             }
 
+            */
 
+            // StreamWriter
+
+            string sourcepath = @"c:\tests\file1.txt";
+            string targetpath = @"c:\tests\file2.txt";
+
+            try
+            {
+                string[] lines = File.ReadAllLines(sourcepath);
+
+                using (StreamWriter sw = File.AppendText(targetpath))
+                {
+                    foreach (string line in lines)
+                    {
+                        sw.WriteLine(line);
+                    }
+                }
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("An error occurred");
+                Console.WriteLine(e.Message);
+            }
 
         }
     }
