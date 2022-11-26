@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 
 
@@ -159,7 +161,6 @@ namespace Files
                 Console.WriteLine(e.Message);
             }
 
-            */
 
             // StreamWriter
 
@@ -184,6 +185,49 @@ namespace Files
                 Console.WriteLine(e.Message);
             }
 
+            */
+
+
+            // Directory and DirectoryInfo
+
+
+            string path = @"c:\tests";
+
+            try
+            {
+                // para diretórios
+
+                IEnumerable<string> folders =  Directory.EnumerateDirectories(path, "*.*", SearchOption.AllDirectories);
+                //var folders =  Directory.EnumerateDirectories(path, "*.*", SearchOption.AllDirectories);
+                Console.WriteLine("FOLDERS:");
+                foreach (string item in folders)
+                {
+                    Console.WriteLine(item);
+                }
+
+                // para arquivos
+                Console.WriteLine();
+                IEnumerable<string> files = Directory.EnumerateFiles(path, "*.*", SearchOption.AllDirectories);  // alldirectories - p/subpastas tbm
+                //var files =  Directory.EnumerateDirectories(path, "*.*", SearchOption.AllDirectories);
+                Console.WriteLine("FILES:");
+                foreach (string item in files)
+                {
+                    Console.WriteLine(item);
+                }
+
+                // para criar novas pastas
+
+                //Directory.CreateDirectory(path + "\\newfolder");
+                Directory.CreateDirectory(@"c:\tests\newfolder");
+
+                // para directoryinfo utiliza-se dos mesmo passo a passo, porem instanciando o objeto
+
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("An error occurred");
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }
