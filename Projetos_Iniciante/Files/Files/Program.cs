@@ -228,7 +228,6 @@ namespace Files
                 Console.WriteLine(e.Message);
             }
 
-            */
 
 
             // PATH
@@ -243,6 +242,9 @@ namespace Files
             Console.WriteLine("GetFileNameWithoutExtension: " + Path.GetFileNameWithoutExtension(path));
             Console.WriteLine("GetFullPath: " + Path.GetFullPath(path));
             Console.WriteLine("GetTempPath: " + Path.GetTempPath());
+
+            */
+
         }
     }
 }
