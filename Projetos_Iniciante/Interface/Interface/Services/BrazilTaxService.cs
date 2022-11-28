@@ -1,7 +1,7 @@
 ﻿
 namespace Interface.Services
 {
-    internal class BrazilTaxService
+    internal class BrazilTaxService : ITaxService  // não é herança, é realização de interface -> BrazilTaxService implementa a operação na interface
     {
         public double Tax(double amount)
         {

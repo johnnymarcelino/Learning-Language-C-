@@ -24,7 +24,7 @@ namespace Interface.Entities
                 + BasicPayment.ToString("F2", CultureInfo.InvariantCulture)
                 + "\nTax: "
                 + Tax.ToString("F2", CultureInfo.InvariantCulture)
-                + "\nTotal Payment"
+                + "\nTotal Payment "
                 + TotalPayment.ToString("F2", CultureInfo.InvariantCulture);
         }
     }
