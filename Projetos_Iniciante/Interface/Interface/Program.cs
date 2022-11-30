@@ -37,7 +37,7 @@ namespace Interface
             double day = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             CarRental carRental = new CarRental(start, finish, new Vehicle(model));
-                                                                        //  injeção de dependencia 
+                                                                        //  injeção de dependencia e inversão de controles de classe de instância
             RentalService rentalService = new RentalService(hour, day, new BrazilTaxService());  // new BrazilTaxService() -> upcasting normal p/ctor
 
             rentalService.ProcessInvoice(carRental);
