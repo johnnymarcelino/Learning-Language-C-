@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Interface2.Model.Entities
 {
-    internal class Rectagle : Shape
+    internal class Rectagle : AbstractShape
     {
         public double Width { get; set; }
         public double Height { get; set; }

@@ -1,9 +1,9 @@
 ﻿using Interface2.Model.Enums;
-
+using System;
 
 namespace Interface2.Model.Entities
 {
-    abstract class Shape
+    abstract class AbstractShape : IShape
     {
         public Color Color { get; set; }
 
