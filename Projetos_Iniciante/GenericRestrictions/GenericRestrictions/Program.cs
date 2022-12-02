@@ -25,7 +25,7 @@ namespace GenericRestrictions
 
             CalculationsService calculationsService = new CalculationsService();
 
-            Product max = calculationsService.Produ(list);
+            Product max = calculationsService.Max(list);
 
             Console.WriteLine("Max: ");
             Console.WriteLine(max);
