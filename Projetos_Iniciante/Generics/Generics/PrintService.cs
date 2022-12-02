@@ -2,13 +2,15 @@
 
 namespace Generics
 {
-    internal class PrintService
+    //  declarando um tipo como objeto para tudo, podemos não ter perfomance e nem o typesafety => exem: object[] _values = new object[10];
+    internal class PrintService<T>  // parametrizado com um tipo T - define o tipo do objeto para resolver problemas de typesafety e perfomance
+        // toda a classe printservice é de um tipo Generico do tipo T
     {
-        private int[] _values = new int[10];  // armazenar 10 numeros inteiros
+        private T[] _values = new T[10];  // armazenar 10 numeros inteiros
 
         private int _count = 0;
 
-        public void AddValue(int value)
+        public void AddValue(T value)
         {
             if (_count == 10)
             {
@@ -18,7 +20,7 @@ namespace Generics
             _count ++;
         }
 
-        public int First()
+        public T First()
         {
             if (_count == 0)
             {
