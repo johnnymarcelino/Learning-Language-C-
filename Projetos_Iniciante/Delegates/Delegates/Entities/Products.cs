@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
 
-namespace Predicate.Entities
+namespace Delegates.Entities
 {
-    internal class Product
+    internal class Products
     {
         public string Name { get; set; }
         public double Price { get; set; }
 
-        public Product(string name, double price)
+        public Products(string name, double price)
         {
             Name = name;
             Price = price;
