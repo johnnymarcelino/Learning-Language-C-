@@ -79,6 +79,17 @@ namespace Linq
 
             var r6 = products.First();
             Console.WriteLine("First test1: " + r6);
+
+            var r7 = products.Where(p => p.Price > 3000.0).FirstOrDefault();  // retorna nulo evitando quebrar o programa
+            Console.WriteLine("First or Default test2: " + r7);
+            Console.WriteLine();
+
+            var r8 = products.Where(p => p.Id == 8).SingleOrDefault();
+            Console.WriteLine("Single or Default test1: " + r8);
+
+            var r9 = products.Where(p => p.Id == 30).SingleOrDefault();
+            Console.WriteLine("Single or Default test2: " + r9);
+            Console.WriteLine();
         }
 
         static void Print<T>(string message, IEnumerable<T> collection)
