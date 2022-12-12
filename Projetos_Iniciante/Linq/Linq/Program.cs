@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Linq
 {
@@ -90,6 +91,37 @@ namespace Linq
             var r9 = products.Where(p => p.Id == 30).SingleOrDefault();
             Console.WriteLine("Single or Default test2: " + r9);
             Console.WriteLine();
+
+            var r10 = products.Max(p => p.Price);
+            Console.WriteLine("Max Price: " + r10);
+
+            var r11 = products.Min(p => p.Price);
+            Console.WriteLine("Min Price: " + r11);
+
+            var r12 = products.Where(p => p.Category.Id == 1).Sum(p => p.Price);
+            Console.WriteLine("Category 1 sum prices: " + r12);
+
+            var r13 = products.Where(p => p.Category.Id == 2).Average(p => p.Price);
+            Console.WriteLine("Category 1 avarege prices: " + r13);
+
+            var r14 = products.Where(p => p.Category.Id == 5).Select(p => p.Price).DefaultIfEmpty(0.0).Average();
+            Console.WriteLine("Category 5 average prices: " + r14);
+
+            var r15 = products.Where(p => p.Category.Id == 1).Select(p =>p.Price).Aggregate(0.0, (x, y) => x + y);
+            Console.WriteLine("Category 5 aggregate sum: " + r15);
+            Console.WriteLine();
+
+            var r16 = products.GroupBy(p => p.Category);  // tem uma cheve e uma coleção de elemento
+            foreach (IGrouping<Category, Product> group in r16)
+            {
+                Console.WriteLine("Category: " + group.Key.Name + ":");
+                foreach (Product product in group)
+                {
+                    Console.WriteLine(product);
+                }
+                Console.WriteLine();
+            }
+
         }
 
         static void Print<T>(string message, IEnumerable<T> collection)
