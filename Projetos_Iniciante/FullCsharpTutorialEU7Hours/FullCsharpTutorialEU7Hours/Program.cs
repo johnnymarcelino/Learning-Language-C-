@@ -22,8 +22,17 @@
         //var username = 10000000000;
         //Console.WriteLine(username);
 
-        WriteSomething();
-        WriteSomethingSpecific("I am a argument and called from a method");
+        //WriteSomething();
+        //WriteSomethingSpecific("I am a argument and called from a method");
+        //Console.ReadKey();
+
+        //Console.WriteLine(Add(Add(10, 40), Add(20, 20)));
+        //Console.WriteLine("----------");
+        //Console.WriteLine(Add(15, 16));
+        //Console.WriteLine("----------");
+        //Console.Read();
+
+        Console.WriteLine(Divide(25, 13));
         Console.ReadKey();
     }
 
@@ -39,7 +48,13 @@
 
     public static int Add(int num1, int numb2)
     {
-        int a = 12;
+        int a = num1 + numb2;
         return a;
     }
+
+    public static double Divide(int num1, int num2)
+    {
+        return num1 / num2;
+    }
+
 }
