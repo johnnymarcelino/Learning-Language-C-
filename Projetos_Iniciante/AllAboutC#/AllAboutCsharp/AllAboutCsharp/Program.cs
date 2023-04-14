@@ -83,7 +83,7 @@ namespace LINQDemo
 
 
 
-namespace LINQDemo
+namespace LINQDemo00
 {
     class Program03
     {
@@ -110,7 +110,7 @@ namespace LINQDemo
 
 
 
-namespace LINQDemo
+namespace LINQDemo01
 {
     class Program04
     {
@@ -148,7 +148,7 @@ namespace LINQDemo
 
 
 
-namespace LINQDemo
+namespace LINQDemo02
 {
     class Program05
     {
