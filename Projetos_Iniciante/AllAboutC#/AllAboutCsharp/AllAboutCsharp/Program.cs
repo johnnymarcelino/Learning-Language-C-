@@ -126,8 +126,8 @@ namespace LINQDemo01
 
             //Linq Query to Fetch all students with Gender Male
             IEnumerable<Student01> QuerySyntax = from std in studentList
-                                               where std.Gender == "Male"
-                                               select std;
+                                                 where std.Gender == "Male"
+                                                 select std;
             //Iterate through the collection
             foreach (var student in QuerySyntax)
             {
@@ -183,3 +183,117 @@ namespace LINQDemo02
         public string Gender { get; set; }
     }
 }
+
+
+/* 
+Sintaxe básica do LINQ: O desenvolvedor deve ser capaz de escrever consultas básicas usando a sintaxe padrão do LINQ, 
+incluindo a cláusula "from", a cláusula "where" e outras cláusulas comuns.
+
+Consultas de junção: O desenvolvedor deve ser capaz de unir dados de várias fontes usando junções no LINQ, 
+incluindo junções internas, externas e cruzadas.
+
+Consultas aninhadas: O desenvolvedor deve ser capaz de usar consultas aninhadas para recuperar dados de várias tabelas ou 
+coleções em uma única consulta.
+
+Operadores de agregação: O desenvolvedor deve ser capaz de usar operadores de agregação, como "Sum", "Count", "Max" e "Min",
+para resumir dados em uma consulta.
+
+Consultas parametrizadas: O desenvolvedor deve ser capaz de escrever consultas parametrizadas 
+que permitem que os valores dos parâmetros sejam especificados dinamicamente em tempo de execução.
+
+Consultas com expressões lambda: O desenvolvedor deve ser capaz de escrever consultas LINQ usando expressões lambda, 
+que são uma forma mais concisa e expressiva de escrever consultas.
+
+Operações de projeção: O desenvolvedor deve ser capaz de projetar dados em diferentes formatos usando operadores de projeção,
+como "Select" e "SelectMany".
+
+Consultas assíncronas: O desenvolvedor deve ser capaz de escrever consultas LINQ assíncronas usando o operador "await"
+para melhorar o desempenho de aplicativos que acessam dados remotamente.
+
+Uso do LINQ em diferentes fontes de dados: O desenvolvedor deve ser capaz de usar o LINQ em diferentes fontes de dados,
+incluindo bancos de dados relacionais, bancos de dados NoSQL e coleções em memória.
+
+Otimização de consultas: O desenvolvedor deve ser capaz de otimizar consultas LINQ para melhorar o desempenho, 
+incluindo o uso de índices em bancos de dados e a aplicação de cláusulas "where" de forma seletiva.
+*/
+
+// Sintaxe de consulta:
+var consulta = from variavel in colecao
+               where condicao
+               orderby ordenacao
+               select resultado;
+
+
+// Sintaxe de método:
+
+var resultado = colecao.Where(variavel => condicao)
+                       .OrderBy(ordenacao)
+                       .Select(resultado);
+
+
+// Exemplo básico (sintaxe de consulta):
+
+int[] numeros = { 1, 2, 3, 4, 5 };
+
+var consulta = from n in numeros
+               where n % 2 == 0
+               select n;
+
+foreach (var numero in consulta)
+{
+    Console.WriteLine(numero);
+}
+
+// Exemplo intermediário (sintaxe de método):
+
+
+var livros = new List<Livro>()
+{
+    new Livro() { Titulo = "Dom Casmurro", Autor = "Machado de Assis", AnoPublicacao = 1899 },
+    new Livro() { Titulo = "Memórias Póstumas de Brás Cubas", Autor = "Machado de Assis", AnoPublicacao = 1881 },
+    new Livro() { Titulo = "O Cortiço", Autor = "Aluísio Azevedo", AnoPublicacao = 1890 },
+    new Livro() { Titulo = "Vidas Secas", Autor = "Graciliano Ramos", AnoPublicacao = 1938 }
+};
+
+var consulta = livros.Where(l => l.Autor == "Machado de Assis")
+                     .OrderBy(l => l.AnoPublicacao)
+                     .Select(l => l.Titulo);
+
+foreach (var livro in consulta)
+{
+    Console.WriteLine(livro);
+}
+
+
+/*
+Suponha que você tenha duas listas de objetos: uma lista de Clientes e uma lista de Pedidos. 
+Cada cliente possui um ID único e cada pedido está associado a um cliente pelo ID do cliente. 
+Você deseja obter uma lista de todos os clientes juntamente com a quantidade de pedidos que cada cliente fez. 
+Você pode fazer isso usando uma junção (join) e agrupamento (group by) em LINQ, conforme o exemplo a seguir:
+*/
+
+List<Cliente> clientes = new List<Cliente>
+{
+    new Cliente { Id = 1, Nome = "João" },
+    new Cliente { Id = 2, Nome = "Maria" },
+    new Cliente { Id = 3, Nome = "Pedro" }
+};
+
+List<Pedido> pedidos = new List<Pedido>
+{
+    new Pedido { Id = 1, ClienteId = 1, Valor = 100 },
+    new Pedido { Id = 2, ClienteId = 2, Valor = 200 },
+    new Pedido { Id = 3, ClienteId = 1, Valor = 50 },
+    new Pedido { Id = 4, ClienteId = 3, Valor = 300 },
+    new Pedido { Id = 5, ClienteId = 2, Valor = 150 }
+};
+
+var pedidosPorCliente = from c in clientes
+                        join p in pedidos on c.Id equals p.ClienteId into gj
+                        select new { Cliente = c.Nome, NumPedidos = gj.Count() };
+
+foreach (var item in pedidosPorCliente)
+{
+    Console.WriteLine($"Cliente: {item.Cliente}, Número de Pedidos: {item.NumPedidos}");
+}
+
